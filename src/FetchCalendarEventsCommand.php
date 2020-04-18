@@ -2,8 +2,8 @@
 
 namespace Spatie\CalendarTile;
 
-use DateTime;
 use Carbon\Carbon;
+use DateTime;
 use Illuminate\Console\Command;
 use Spatie\GoogleCalendar\Event;
 
