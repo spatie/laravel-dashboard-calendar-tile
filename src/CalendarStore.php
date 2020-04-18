@@ -33,6 +33,7 @@ class CalendarStore
             ->map(function (array $event) {
                 $event['date'] = Carbon::createFromTimeString($event['date']);
                 $event['withinWeek'] = $event['date']->diffInDays() < 7;
+
                 return $event;
             });
     }
