@@ -9,7 +9,7 @@ class CalendarTileServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        Livewire::component('dashboard-calendar', CalendarTileComponent::class);
+        Livewire::component('calendar-tile', CalendarTileComponent::class);
 
         if ($this->app->runningInConsole()) {
             $this->commands([
