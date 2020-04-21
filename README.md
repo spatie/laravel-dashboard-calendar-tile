@@ -67,7 +67,7 @@ In your dashboard view you use the `livewire:calendar-tile` component. You shoul
 If you want to customize the view used to render this tile, run this command:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\CalendarTile\CalendarTileServiceProvider" --tag="dashboard-calendar-tile"
+php artisan vendor:publish --provider="Spatie\CalendarTile\CalendarTileServiceProvider" --tag="dashboard-calendar-tile-views"
 ```
 
 ## Testing
