@@ -17,6 +17,10 @@ class CalendarTileServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-calendar-tile-views');
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/dashboard-calendar-tile'),
+        ], 'dashboard-calendar-tile-views');
+
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-calendar-tile');
     }
 }
