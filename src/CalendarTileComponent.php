@@ -33,7 +33,7 @@ class CalendarTileComponent extends Component
     {
         return view('dashboard-calendar-tile::tile', [
             'events' => CalendarStore::make()->eventsForCalendarId($this->calendarId),
-            'refreshIntervalInSeconds' => config('dashboard.tiles.calendar.refresh_interval_in_seconds') ?? 60
+            'refreshIntervalInSeconds' => config('dashboard.tiles.calendar.refresh_interval_in_seconds') ?? 60,
         ]);
     }
 }
