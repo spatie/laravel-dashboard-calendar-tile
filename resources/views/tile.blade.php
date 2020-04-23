@@ -1,5 +1,14 @@
 <x-dashboard-tile :position="$position">
-    <div wire:poll.{{ $refreshIntervalInSeconds }}s class="grid h-full">
+    <div
+        wire:poll.{{ $refreshIntervalInSeconds }}s
+        class="grid {{ isset($title) ? 'grid-rows-auto-auto gap-2' : '' }} h-full"
+    >
+        @isset($title)
+            <h1 class="uppercase font-bold">
+                {{ $title }}
+            </h1>
+        @endisset
+
         <ul class="self-center divide-y-2 divide-canvas">
             @foreach($events as $event)
                 <li class="py-1">

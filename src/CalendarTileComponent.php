@@ -12,11 +12,21 @@ class CalendarTileComponent extends Component
     /** @var string */
     public $position;
 
-    public function mount(string $calendarId, string $position)
+    /** @var string|null */
+    public $title;
+
+    /** @var int */
+    public $refreshInSeconds;
+
+    public function mount(string $calendarId, string $position, ?string $title = null, int $refreshInSeconds = 60)
     {
         $this->calendarId = $calendarId;
 
         $this->position = $position;
+
+        $this->title = $title;
+
+        $this->refreshInSeconds = $refreshInSeconds;
     }
 
     public function render()
