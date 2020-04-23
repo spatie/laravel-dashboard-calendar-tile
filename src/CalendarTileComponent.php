@@ -12,22 +12,18 @@ class CalendarTileComponent extends Component
     /** @var string */
     public $position;
 
-    /** @var int */
-    public $refreshInSeconds;
-
-    public function mount(string $calendarId, string $position, int $refreshInSeconds = 60)
+    public function mount(string $calendarId, string $position)
     {
         $this->calendarId = $calendarId;
 
         $this->position = $position;
-
-        $this->refreshInSeconds = $refreshInSeconds;
     }
 
     public function render()
     {
         return view('dashboard-calendar-tile::tile', [
             'events' => CalendarStore::make()->eventsForCalendarId($this->calendarId),
+            'refreshIntervalInSeconds' => config('dashboard.tiles.calendar.refresh_interval_in_seconds') ?? 60
         ]);
     }
 }

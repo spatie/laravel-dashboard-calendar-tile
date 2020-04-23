@@ -16,8 +16,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 ## Documentation
 
-All documentation is available [on our documentation site](TODO: add link).
-
+All documentation is available [on our documentation site](https://docs.spatie.be/laravel-dashboard/v1/adding-tiles/google-calendar).
 
 ## Testing
 
