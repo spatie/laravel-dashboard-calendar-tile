@@ -1,8 +1,5 @@
-<x-dashboard-tile :position="$position">
-    <div
-        wire:poll.{{ $refreshIntervalInSeconds }}s
-        class="grid {{ isset($title) ? 'grid-rows-auto-auto gap-2' : '' }} h-full"
-    >
+<x-dashboard-tile :position="$position" :refresh-interval="$refreshIntervalInSeconds">
+    <div class="grid {{ isset($title) ? 'grid-rows-auto-auto gap-2' : '' }} h-full">
         @isset($title)
             <h1 class="uppercase font-bold">
                 {{ $title }}
