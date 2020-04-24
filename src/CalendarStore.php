@@ -55,6 +55,10 @@ class CalendarStore
             return "In {$carbon->diffInDays()} days";
         }
 
+        if ($carbon->diffInDays() <= 14) {
+            return "Next week";
+        }
+
         $dateFormat = config('dashboard.tiles.calendar.date_format') ?? 'd.m.Y';
 
         return $carbon->format($dateFormat);
