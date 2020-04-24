@@ -12,7 +12,7 @@
                     <div class="my-2">
                         <div class="{{ $event['withinWeek'] ? 'font-bold' : '' }}">{{ $event['name'] }}</div>
                         <div class="text-sm text-dimmed">
-                            {{ $event['date']->format('d.m.Y') }}
+                            {{ $event['presentableDate'] }}
                         </div>
                     </div>
                 </li>

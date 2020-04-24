@@ -33,8 +33,28 @@ class CalendarStore
             ->map(function (array $event) {
                 $event['date'] = Carbon::createFromTimeString($event['date']);
                 $event['withinWeek'] = $event['date']->diffInDays() < 7;
+                $event['presentableDate'] = Carbon::createFromTimeString($event['date']);
 
                 return $event;
             });
+    }
+
+    public function getPresentableDate(Carbon $carbon): string
+    {
+        if ($carbon->isToday()) {
+            return 'Today';
+        }
+
+        if ($carbon->isTomorrow()) {
+            return 'Tomorrow';
+        }
+
+        if ($carbon->diffInDays() < 8) {
+            return "In {$carbon->diffInDays()} days";
+        }
+
+        $dateFormat = config('dashboard.tiles.calendar.date_format') ?? 'd.m.Y';
+
+        return $carbon->format($dateFormat);
     }
 }
