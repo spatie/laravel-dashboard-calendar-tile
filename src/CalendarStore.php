@@ -31,9 +31,11 @@ class CalendarStore
     {
         return collect($this->tile->getData('events_' . $calendarId) ?? [])
             ->map(function (array $event) {
-                $event['date'] = Carbon::createFromTimeString($event['date']);
+                $carbon = Carbon::createFromTimeString($event['date']);
+
+                $event['date'] = $carbon;
                 $event['withinWeek'] = $event['date']->diffInDays() < 7;
-                $event['presentableDate'] = Carbon::createFromTimeString($event['date']);
+                $event['presentableDate'] = $this->getPresentableDate($carbon);
 
                 return $event;
             });
