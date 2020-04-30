@@ -4,7 +4,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-calendar-tile/run-tests?label=tests)](https://github.com/spatie/laravel-dashboard-calendar-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-calendar-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-calendar-tile)
 
-This tile can used on the [Laravel Dashboard](https://github.com/spatie/laravel-dashboard) to display events on a Google calendar.
+This tile can used on the [Laravel Dashboard](https://docs.spatie.be/laravel-dashboard) to display events on a Google calendar.
 
 ## Support us
 
@@ -14,7 +14,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 ## Documentation
 
-All documentation is available [on our documentation site](https://docs.spatie.be/laravel-dashboard/v1/adding-tiles/google-calendar).
+All documentation is available [on our documentation site](https://docs.spatie.be/laravel-dashboard).
 
 ## Testing
 
