@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "spatie/laravel-dashboard": "dev-master",
+        "spatie/laravel-dashboard": "^1.0",
         "spatie/laravel-google-calendar": "^2.5"
     },
     "require-dev": {
@@ -49,11 +49,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../laravel-dashboard"
-        }
-    ]
+    "prefer-stable": true
 }
