@@ -15,10 +15,10 @@ class CalendarTileComponent extends Component
     /** @var string|null */
     public $title;
 
-    /** @var int */
+    /** @var int|null */
     public $refreshInSeconds;
 
-    public function mount(?string $calendarId = null, string $position, ?string $title = null, int $refreshInSeconds = 60)
+    public function mount(?string $calendarId = null, string $position, ?string $title = null, int $refreshInSeconds = null)
     {
         $this->calendarId = $calendarId ?? config('dashboard.tiles.calendar.ids')[0];
 
@@ -33,7 +33,7 @@ class CalendarTileComponent extends Component
     {
         return view('dashboard-calendar-tile::tile', [
             'events' => CalendarStore::make()->eventsForCalendarId($this->calendarId),
-            'refreshIntervalInSeconds' => config('dashboard.tiles.calendar.refresh_interval_in_seconds') ?? 60,
+            'refreshIntervalInSeconds' => $this->refreshInSeconds ?? config('dashboard.tiles.calendar.refresh_interval_in_seconds') ?? 60,
         ]);
     }
 }
