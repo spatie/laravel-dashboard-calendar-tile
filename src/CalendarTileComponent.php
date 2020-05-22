@@ -18,9 +18,9 @@ class CalendarTileComponent extends Component
     /** @var int */
     public $refreshInSeconds;
 
-    public function mount(string $calendarId, string $position, ?string $title = null, int $refreshInSeconds = 60)
+    public function mount(?string $calendarId = null, string $position, ?string $title = null, int $refreshInSeconds = 60)
     {
-        $this->calendarId = $calendarId;
+        $this->calendarId = $calendarId ?? config('dashboard.tiles.calendar.ids')[0];
 
         $this->position = $position;
 
