@@ -2,7 +2,9 @@
 
 All notable changes to `laravel-dashboard-calendar-tile` will be documented in this file
 
+## 2.0.0 - 2020-09-07
 
+- add support for dashboard v2
 
 ## 1.1.1 - 2020-05-22
 
