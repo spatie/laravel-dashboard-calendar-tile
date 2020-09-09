@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "spatie/laravel-dashboard": "^1.0",
+        "spatie/laravel-dashboard": "^2.0",
         "spatie/laravel-google-calendar": "^2.5"
     },
     "require-dev": {
