@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-dashboard-calendar-tile` will be documented in this file
 
+## 2.0.5 - 2020-09-18
+
+- fix support for multiple calendars
+
 ## 2.0.4 - 2020-09-15
 
 - allow newer versions of google calendar
