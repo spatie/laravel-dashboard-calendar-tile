@@ -30,7 +30,7 @@ class FetchCalendarEventsCommand extends Command
                 ->unique('name')
                 ->toArray();
 
-            CalendarStore::make()->setEventsForCalendarId($events, config('google-calendar.calendar_id'));
+            CalendarStore::make()->setEventsForCalendarId($events, $calendarId);
         }
 
         $this->info('All done!');
