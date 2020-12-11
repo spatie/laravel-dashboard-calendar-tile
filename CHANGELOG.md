@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-dashboard-calendar-tile` will be documented in this file
 
+## 2.0.6 - 2020-12-12
+
+- allow PHP 8
+
 ## 2.0.5 - 2020-09-18
 
 - fix support for multiple calendars
