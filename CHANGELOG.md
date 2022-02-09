@@ -5,6 +5,7 @@ All notable changes to `laravel-dashboard-calendar-tile` will be documented in t
 ## 2.1.0 - 2022-02-09
 
 - drop PHP 7.4 support
+- drop Laravel 7 support
 
 ## 2.0.6 - 2020-12-12
 
