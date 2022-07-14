@@ -55,7 +55,7 @@ class CalendarStore
             return "In {$carbon->diffInDays()} days";
         }
 
-        if ($carbon->diffInDays() <= 14 && $carbon->isNextWeek()) {
+        if ($carbon->isNextWeek()) {
             return "Next week";
         }
 
