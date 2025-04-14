@@ -34,7 +34,7 @@ class CalendarStore
                 $carbon = Carbon::createFromTimeString($event['date']);
 
                 $event['date'] = $carbon;
-                $event['withinWeek'] = $event['date']->diffInDays() < 7;
+                $event['withinWeek'] = $event['date']->diffInDays(now(), true) < 7;
                 $event['presentableDate'] = $this->getPresentableDate($carbon);
 
                 return $event;
@@ -51,8 +51,8 @@ class CalendarStore
             return 'Tomorrow';
         }
 
-        if ($carbon->diffInDays() < 8) {
-            return "In {$carbon->diffInDays()} days";
+        if ($carbon->diffInDays(now(), true) < 8) {
+            return "In {$carbon->diffInDays(now(), true)} days";
         }
 
         if ($carbon->isNextWeek()) {
