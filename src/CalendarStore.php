@@ -53,6 +53,7 @@ class CalendarStore
 
         if ($carbon->diffInDays(now(), true) < 8) {
             $days = round($carbon->diffInDays(now(), true));
+
             return "In {$days} days";
         }
 
