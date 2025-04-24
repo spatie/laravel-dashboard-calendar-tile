@@ -52,7 +52,8 @@ class CalendarStore
         }
 
         if ($carbon->diffInDays(now(), true) < 8) {
-            return "In {$carbon->diffInDays(now(), true)} days";
+            $days = round($carbon->diffInDays(now(), true))
+            return "In {$days} days";
         }
 
         if ($carbon->isNextWeek()) {
