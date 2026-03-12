@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -d /Users/timvandijck/Projects/spatie-dashboard/laravel-dashboard-*-tile/ 2>/dev/null)",
+      "Bash(composer validate:*)",
+      "Bash(composer update:*)",
+      "Bash(vendor/bin/pest 2>&1)"
+    ]
+  }
+}

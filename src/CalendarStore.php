@@ -10,7 +10,7 @@ class CalendarStore
 {
     private Tile $tile;
 
-    public static function make()
+    public static function make(): static
     {
         return new static();
     }

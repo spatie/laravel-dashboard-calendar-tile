@@ -2,34 +2,27 @@
 
 namespace Spatie\CalendarTile;
 
-use Livewire\Component;
+use Illuminate\Contracts\View\View;
+use Spatie\Dashboard\Components\BaseTileComponent;
 
-class CalendarTileComponent extends Component
+class CalendarTileComponent extends BaseTileComponent
 {
-    /** @var string */
-    public $calendarId;
+    public string $calendarId = '';
 
-    /** @var string */
-    public $position;
+    public ?string $title = null;
 
-    /** @var string|null */
-    public $title;
+    public ?int $refreshInSeconds = null;
 
-    /** @var int|null */
-    public $refreshInSeconds;
-
-    public function mount(?string $calendarId = null, string $position, ?string $title = null, int $refreshInSeconds = null)
+    public function mount(?string $calendarId = null, ?string $title = null, ?int $refreshInSeconds = null): void
     {
         $this->calendarId = $calendarId ?? config('dashboard.tiles.calendar.ids')[0];
-
-        $this->position = $position;
 
         $this->title = $title;
 
         $this->refreshInSeconds = $refreshInSeconds;
     }
 
-    public function render()
+    public function render(): View
     {
         return view('dashboard-calendar-tile::tile', [
             'events' => CalendarStore::make()->eventsForCalendarId($this->calendarId),

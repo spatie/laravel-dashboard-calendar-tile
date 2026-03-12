@@ -13,7 +13,7 @@ class FetchCalendarEventsCommand extends Command
 
     protected $description = 'Fetch events from a Google Calendar';
 
-    public function handle()
+    public function handle(): void
     {
         $this->info('Fetching calendar events...');
 
