@@ -7,7 +7,7 @@ use Livewire\Livewire;
 
 class CalendarTileServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         Livewire::component('calendar-tile', CalendarTileComponent::class);
 

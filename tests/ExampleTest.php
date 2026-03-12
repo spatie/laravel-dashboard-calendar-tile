@@ -1,14 +1,5 @@
 <?php
 
-namespace Spatie\CalendarTile\Tests;
-
-use PHPUnit\Framework\TestCase;
-
-class ExampleTest extends TestCase
-{
-    /** @test */
-    public function true_is_true()
-    {
-        $this->assertTrue(true);
-    }
-}
+it('can run a basic test', function () {
+    expect(true)->toBeTrue();
+});
